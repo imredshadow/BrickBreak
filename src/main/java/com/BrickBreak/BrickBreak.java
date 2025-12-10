@@ -220,6 +220,8 @@ public class BrickBreak extends JPanel implements KeyListener, ActionListener {
 			else {
 				player.addVelocity(-4);
 			}
+		
+		}
 
 		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 			play = false;
@@ -242,7 +244,6 @@ public class BrickBreak extends JPanel implements KeyListener, ActionListener {
 		}
 
 	}
-	
-}
+
 
 }
