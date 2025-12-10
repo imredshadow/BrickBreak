@@ -10,14 +10,15 @@ public class Paddle {
 	private int x;
 	private int y;
 	private int height;
-	private int speed;
+	private int width;
+	private int velocity;
 	
 	//constructor(s):
-	public Paddle(int x, int y, int height, int speed) {
+	public Paddle(int x, int y, int width, int height) {
 		this.x = x;
 		this.y = y;
+		this.width = width;
 		this.height = height;
-		this.speed = speed;
 	}
 
 	//methods:
@@ -29,7 +30,7 @@ public class Paddle {
 		this.x = x;
 	}
 
-	public int getYpos() {
+	public int getY() {
 		return y;
 	}
 
@@ -37,38 +38,33 @@ public class Paddle {
 		this.y = y;
 	}
 
-	public int getSize() {
-		return size;
+	public int getHeight() {
+		return height;
 	}
 
-	public void setSize(int size) {
-		this.size = size;
+	public int getWidth() {
+		return width;
 	}
 
-	public void setXVelocity(int x) {
-		this.xVelocity = x;
+	public int getVelocity() {
+		return velocity;
 	}
 
-	public void setYVelocity(int y) {
-		this.yVelocity = y;
+	public void addVelocity(int y) {
+		this.velocity += y;
 	}
 
-	public void reverseX() {
-		xVelocity *= -1;
-	}
-
-	public void reverseY() {
-		yVelocity *= -1;
+	public void setVelocity(int velocity) {
+		this.velocity = velocity;
 	}
 
 	public void draw(Graphics g){
 		g.setColor(Color.cyan);
-		g.fillOval(x, y, size, size);
+		g.fillRect(x, y, width, height);
 	}
 
 	public void move() {
-		x += xVelocity;
-		y += yVelocity;
+		x += velocity;
 	}
 
 	
