@@ -60,11 +60,12 @@ public class Paddle {
 		this.velocity = velocity;
 	}
 
+	//Draws the paddle using rectangle and color
 	public void draw(Graphics g){
 		g.setColor(Color.cyan);
 		g.fillRect(x, y, width, height);
 	}
-
+	//Moves the paddle based on the velocity variable
 	public void move() {
 		x += velocity;
 	}

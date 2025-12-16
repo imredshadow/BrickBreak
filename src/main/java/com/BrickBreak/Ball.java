@@ -54,19 +54,25 @@ public class Ball {
 		this.yVelocity = y;
 	}
 
+	//Changes the x direction of the ball from whatever it was moving
 	public void reverseX() {
 		xVelocity *= -1;
 	}
+
+	//Changes the y direction of the ball from whatever it was moving
 
 	public void reverseY() {
 		yVelocity *= -1;
 	}
 
+
+	//Draws the ball using an oval and a color
 	public void draw(Graphics g){
 		g.setColor(Color.cyan);
 		g.fillOval(x, y, size, size);
 	}
 
+	//Changes the x and y based on the respective velocity variable.
 	public void move() {
 		x += xVelocity;
 		y += yVelocity;
