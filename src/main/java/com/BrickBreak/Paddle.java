@@ -1,4 +1,6 @@
 package com.BrickBreak;
+//Jian Acol
+//Creates the paddle and makes its instance variables, constructor, and mehtods like moving
 
 import java.awt.Graphics;
 import java.awt.*;
